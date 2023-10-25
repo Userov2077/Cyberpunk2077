@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 "> 
+    <title>Cyberpunk 2077</title>
+    <link rel="stylesheet" type="text.css" href="style.css">
+    <style> 
+    body { 
+      margin: 0; 
+      padding: 0; 
+    } 
+ 
+    #video-background { 
+      position: fixed; 
+      top: 0; 
+      left: 0; 
+      width: 100%; 
+      height: 100%; 
+      z-index: -1;
+      object-fit: cover; 
+    } 
+ 
+    .content { 
+      position: relative; 
+      z-index: 1; 
+      padding: 20px; 
+      color: #fff; 
+    } 
+  </style> 
+<body> 
+  <video autoplay muted loop id="video-background"> 
+    <source src="qq.mp4" type="video/mp4"> 
+  </video> 
+ 
+  <div class="content"> 
+    <h1></h1> 
+    <p></p> 
+  </div> 
+</body>
+<body>
+  <a href="https://www.cyberpunk.net/kz/ru/cyberpunk-2077">
+<button class="karkas-knopku">
+  Cyber World<span aria-hidden>_</span>
+  <span aria-hidden class="animatsiya">Cyber</span>
+  <span aria-hidden class="meshchenia">2077</span>
+</button></a><br><br>
+</body>
+</head>
+<body>
+  <a href="https://www.cyberpunk.net/ru/news/">
+<button class ="karkas-knopku">
+  Cyber News<span aria-hidden>_</span>
+  <span aria-hidden class="animatsiya">404_</span>
+  <span aria-hidden class="meshchenia">2077</span>
+</button></a>
+</body>
+<body>
+
+  <div class="content"> 
+    <h1></h1> 
+    <p></p> 
+  </div> 
+</body>
+<style>
+@font-face {
+  font-family: Cyber;
+  src: url("https://assets.codepen.io/605876/Blender-Pro-Bold.otf");
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: 'Cyber', sans-serif;
+  background: linear-gradient(90deg, #f5ed00 70%, #e6de00 70%), #fff700;
+}
+body .karkas-knopku + .karkas-knopku {
+  margin-top: 2rem;
+}
+
+.karkas-knopku {
+  --primary: hsl(var(--primary-hue), 85%, calc(var(--primary-lightness, 50) * 1%));
+  --shadow-primary: hsl(var(--shadow-primary-hue), 90%, 50%);
+  --primary-hue: 0;
+  --primary-lightness: 50;
+  --color: hsl(0, 0%, 100%);
+  --font-size: 26px;
+  --shadow-primary-hue: 180;
+  --label-size: 9px;
+  --shadow-secondary-hue: 60;
+  --shadow-secondary: hsl(var(--shadow-secondary-hue), 90%, 60%);
+  --clip: polygon(0 0, 100% 0, 100% 100%, 95% 100%, 95% 90%, 85% 90%, 85% 100%, 8% 100%, 0 70%);
+  --border: 4px;
+  --shimmy-distance: 5;
+  --clip-one: polygon(0 2%, 100% 2%, 100% 95%, 95% 95%, 95% 90%, 85% 90%, 85% 95%, 8% 95%, 0 70%);
+  --clip-two: polygon(0 78%, 100% 78%, 100% 100%, 95% 100%, 95% 90%, 85% 90%, 85% 100%, 8% 100%, 0 78%);
+  --clip-three: polygon(0 44%, 100% 44%, 100% 54%, 95% 54%, 95% 54%, 85% 54%, 85% 54%, 8% 54%, 0 54%);
+  --clip-four: polygon(0 0, 100% 0, 100% 0, 95% 0, 95% 0, 85% 0, 85% 0, 8% 0, 0 0);
+  --clip-five: polygon(0 0, 100% 0, 100% 0, 95% 0, 95% 0, 85% 0, 85% 0, 8% 0, 0 0);
+  --clip-six: polygon(0 40%, 100% 40%, 100% 85%, 95% 85%, 95% 85%, 85% 85%, 85% 85%, 8% 85%, 0 70%);
+  --clip-seven: polygon(0 63%, 100% 63%, 100% 80%, 95% 80%, 95% 80%, 85% 80%, 85% 80%, 8% 80%, 0 70%);
+  font-family: 'Cyber', sans-serif;
+  color: var(--color);
+  cursor: pointer;
+  background: transparent;
+  text-transform: uppercase;
+  font-size: var(--font-size);
+  outline: transparent;
+  letter-spacing: 2px;
+  position: relative;
+  font-weight: 700;
+  border: 0;
+  min-width: 300px;
+  height: 75px;
+  line-height: 75px;
+  transition: background 0.2s;
+}
+
+.karkas-knopku:hover {
+  --primary: hsl(var(--primary-hue), 85%, calc(var(--primary-lightness, 50) * 0.8%));
+}
+.karkas-knopku:active {
+  --primary: hsl(var(--primary-hue), 85%, calc(var(--primary-lightness, 50) * 0.6%));
+}
+
+.karkas-knopku:after,
+.karkas-knopku:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  clip-path: var(--clip);
+  z-index: -1;
+}
+
+.karkas-knopku:before {
+  background: var(--shadow-primary);
+  transform: translate(var(--border), 0);
+}
+
+.karkas-knopku:after {
+  background: var(--primary);
+}
+
+.meshchenia {
+  position: absolute;
+  padding: 1px 4px;
+  letter-spacing: 1px;
+  line-height: 1;
+  bottom: -5%;
+  right: 5%;
+  font-weight: normal;
+  color: hsl(0, 0%, 0%);
+  font-size: var(--label-size);
+}
+
+.animatsiya {
+  position: absolute;
+  top: calc(var(--border) * -1);
+  left: calc(var(--border) * -1);
+  right: calc(var(--border) * -1);
+  bottom: calc(var(--border) * -1);
+  background: var(--shadow-primary);
+  text-shadow: 2px 2px var(--shadow-primary), -2px -2px var(--shadow-secondary);
+  clip-path: var(--clip);
+  animation: glitch 2s infinite;
+  display: none;
+}
+
+.karkas-knopku:hover .animatsiya {
+  display: block;
+}
+
+.animatsiya:before {
+  content: '';
+  position: absolute;
+  top: calc(var(--border) * 1);
+  right: calc(var(--border) * 1);
+  bottom: calc(var(--border) * 1);
+  left: calc(var(--border) * 1);
+  clip-path: var(--clip);
+  background: var(--primary);
+  z-index: -1;
+}
+
+@keyframes glitch {
+  0% {
+  clip-path: var(--clip-one);
+  }
+  2%, 8% {
+  clip-path: var(--clip-two);
+  transform: translate(calc(var(--shimmy-distance) * -1%), 0);
+  }
+  6% {
+    clip-path: var(--clip-two);
+  transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+  }
+  9% {
+  clip-path: var(--clip-two);
+  transform: translate(0, 0);
+  }
+  10% {
+  clip-path: var(--clip-three);
+  transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+  }
+  13% {
+  clip-path: var(--clip-three);
+  transform: translate(0, 0);
+  }
+  14%, 21% {
+  clip-path: var(--clip-four);
+  transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+  }
+  25% {
+  clip-path: var(--clip-five);
+  transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+  }
+  30% {
+  clip-path: var(--clip-five);
+  transform: translate(calc(var(--shimmy-distance) * -1%), 0);
+  }
+  35%, 45% {
+  clip-path: var(--clip-six);
+  transform: translate(calc(var(--shimmy-distance) * -1%));
+  }
+  40% {
+  clip-path: var(--clip-six);
+  transform: translate(calc(var(--shimmy-distance) * 1%));
+  }
+  50% {
+  clip-path: var(--clip-six);
+  transform: translate(0, 0);
+  }
+  55% {
+  clip-path: var(--clip-seven);
+  transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+  }
+  60% {
+  clip-path: var(--clip-seven);
+  transform: translate(0, 0);
+  }
+  31%, 61%, 100% {
+  clip-path: var(--clip-four);
+  }
+}
+.karkas-knopku:nth-of-type(2) {
+  --primary-hue: 260;
+}
+</style>
+</head>
+<body>
+<header> 
+
+
+
+  <!-- CYBERPUNK 2077-->
+
+
+
+ <style>
+  h1{
+    font-size: 70px;
+    width: 500px;
+    height: -100px;
+    color: #ffff00; 
+    text-shadow: 20px 20px 10px #ff00ff; 
+    background-image: linear-gradient(to right, #00ffffff); 
+    animation: neon-glow 1s infinite alternate; 
+  } 
+ 
+  @keyframes neon-glow { 
+    0% { text-shadow: 2px 2px 4px #ff00ff; } 
+    50% { text-shadow: none; } 
+    100% { text-shadow: 2px 2px 4px #ff00ff; } 
+  }
+</style>
+ <h1>Cyberpunk 2077</h1>
+    </header> 
+
+
+<!--PHOTOS1-->
+ <body>
+    <style> 
+  .video-containerq { 
+    position: relative; 
+    left: 370px; /* Измените значение left в соответствии с вашими потребностями */ 
+  } 
+</style> 
+ 
+
+ 
+<div class="video-containerw"> 
+    <video src="C:\Users\usero\OneDrive\Рабочий стол\Userov html\v1.mp4" alt="video" width="750"  controls></video></div>
+  </body>
+
+  <body>
+    <style> 
+  .video-containerw { 
+    position: relative; 
+    right: 370px; /* Измените значение left в соответствии с вашими потребностями */ 
+  } 
+</style> 
+ 
+
+ 
+<div class="video-containerq"> 
+    <video src="C:\Users\usero\OneDrive\Рабочий стол\Userov html\v2.mp4" alt="video" width="750"  controls></video></div>
+  </body>
+
+
+ <style> 
+    body { 
+      background-color: #000; 
+      color: #0f0; 
+      font-family: 'Cyber', sans-serif; 
+    } 
+ 
+    .cyberpunk-window {
+ position: absolute; 
+      top: 972px; 
+      left: 10px; 
+      width: 730px; 
+      height: 300px; 
+      background-color: #0905; 
+      border: 2px solid #0f0; 
+      padding: 20px; 
+      box-sizing: border-box; 
+}
+    } 
+ 
+    .cyberpunk-text { 
+      font-size: 25px; 
+      line-height: 1.5; 
+    } 
+  </style> 
+</head> 
+<body> 
+  <div class="cyberpunk-window"> 
+   <font color='lime'><p><big>ДОБРО ПОЖАЛОВАТЬ В МРАЧНОЕ БУДУЩЕЕ
+Откройте для себя мир киберпанка во всём его многообразии, от многогранной истории Cyberpunk 2077 и шпионских интриг в дополнении «Призрачная свобода» до трогательных эпизодов популярного аниме Cyberpunk: Edgerunners, завоевавшего множество наград. Опасный мегаполис Найт-Сити всегда найдёт, чем вас удивить.</big></p></font>
+  </div> 
+  <style> 
+    body { 
+      background-color: #f00; 
+      color: #f00; 
+      font-family: 'Cyber', sans-serif; 
+    } 
+ 
+    .cyberpunk-windowt{
+ position: absolute; 
+      top: 652px; 
+      left: 760px; 
+      width: 740px; 
+      height: 300px; 
+      background-color: rgb(255, 0, 0, 0.3); 
+      border: 2px solid #f00; 
+      padding: 20px; 
+      box-sizing: border-box; 
+}
+    } 
+ 
+    .cyberpunk-text { 
+      font-size: 25px; 
+      line-height: 1.5; 
+    } 
+  </style> 
+</head> 
+<body> 
+  <div class="cyberpunk-windowt"> 
+   <p><big>
+«Cyberpunk 2077: Призрачная свобода» уже доступна на ПК в Steam, GOG, Epic Games Store и GeForce Now. На Xbox Series X|S и PlayStation 5 дополнение становится доступным в полночь по вашему местному времени.
+Вернитесь к роли кибернетически усовершенствованного наёмника Ви и станьте шпионом НСША, чтобы спасти саму главу государства, заручившись помощью спецагента Соломона Рида.</big></p>
+  </div> 
+   <style>
+  h{
+    font-size: 70px;
+    width: 495px;
+    height: 100px;
+    color: #ffff00; 
+    text-shadow: 20px 20px 10px #ff00ff; 
+    background-image: linear-gradient(to right, #00ffffff); 
+    animation: neon-glow 1s infinite alternate; 
+  } 
+ 
+  @keyframes neon-glow { 
+    0% { text-shadow: 2px 2px 4px #ff00ff; } 
+    50% { text-shadow: none; } 
+    100% { text-shadow: 2px 2px 4px #ff00ff; } 
+  }
+</style>
+
+
+<!--PERSONS-->
+
+
+
+ <h>Cyber Persons</h>
+   <img src="C:\Users\usero\OneDrive\Рабочий стол\Userov html\h1.jpg" alt="Фото" width="150" style="margin-right: 1300px;">
+   <style> 
+    body { 
+      background-color: 'lemon'; 
+      color: 'yellow'; 
+      font-family: 'Cyber', sans-serif; 
+    } 
+ 
+    .cyberpunk-windowq{
+ position: absolute; 
+      top: 1500px; 
+      left:200px; 
+      width: 1000px; 
+      height: 245px; 
+      background-color: rgb(255, 255, 204, 0.3); 
+      border: 2px solid #fff700; 
+      padding: 20px; 
+      box-sizing: border-box; 
+}
+    } 
+ 
+    .cyberpunk-text { 
+      font-size: 25px; 
+      line-height: 1.5; 
+    } 
+  </style> 
+</head> 
+<body> 
+  <div class="cyberpunk-windowq"> 
+   <p style="color: yellow">*ID сотрудника Ви-корпората — НС770416. ID Ви из предыстории Дитя улиц — С/206920/2039. У Ви-кочевника ID отсутствует.<br>
+*Дата рождения Ви — 12 октября 2053 года, т.е. его/её знак Зодиака — Весы.<br>
+*Ви живёт в квартире №0716 на 8-й этаже мегабашни H10 в Маленьком Китае, Уотсон. Номер договора Ви об аренде квартиры в мегабашне H10 — ВД-233015722/2077. За время болезни после налёта на отель «Компэки плаза» у Ви возникла задолженность по аренде.<br>
+*В тот период, пока Ви жил(а) в доме Джеки Уэллса, он(а) приобрел(а) автомобиль «Арчер Хелла EC-D i360».<br>
+*Карта Таро Ви — Карта Таро Шут. Она символизирует начало путешествия и появление в жизни чего-то нового, внутреннего ребёнка — любопытного, но наивного и легкомысленного.<br>
+*Любимая текила Ви — «Сенцон». По словам старшего дизайнера квестов «CD Projekt RED» Патрика Миллса, она также является любимой текилой Джонни Сильверхенда.
+*Ви нравится вестерн «Непрощённый» с Джином Хэкменом в главной роли (1992 г.).<br>
+*Ранее увлечением Ви были брейндансовые аниме.<br></p>
+</div>
+</body>
+
+
+
+<!--judy-->
+<body>
+  <br><br><br>
+<img src="C:\Users\usero\OneDrive\Рабочий стол\Userov html\h2.jpg" alt="Фото" width="150" style="margin-right:  1300px;">
+   <style> 
+    body { 
+      background-color: 'yellow'; 
+      color: 'yellow'; 
+      font-family: 'Cyber', sans-serif; 
+    } 
+ 
+    .cyberpunk-windoww{
+ position: absolute; 
+      top: 1800px; 
+      left:200px; 
+      width: 1000px; 
+      height: 245px; 
+      background-color: rgb(255, 255, 204, 0.3); 
+      border: 2px solid #fff700; 
+      padding: 20px; 
+      box-sizing: border-box; 
+}
+    } 
+ 
+    .cyberpunk-text { 
+      font-size: 25px; 
+      line-height: 1.5; 
+    } 
+  </style> 
+</head> 
+<body> 
+  <div class="cyberpunk-windoww"> 
+    <p style="color: yellow">Джуди родилась и выросла в небольшом городе рядом с Найт-Сити. Отца она никогда не знала, а мать умерла, когда Джуди была еще маленькой, поэтому воспитание ребёнка легло на плечи бабушки Айнары и дедушки, из-за чего Джуди подвергалась нападкам со стороны сверстников. Дедушка героини очень хорошо разбирался в технике и именно от него она заразилась страстью к технологиям.<br>
+      Джуди Альварес – одна из самых талантливых монтажёров брейнданса и опытный техник. При желании Джуди могла бы работать в индустрии развлечений и зарабатывать неплохие деньги, но поскольку ей важна независимость, она последовательно отклоняет такие предложения. Анархистка по духу, Джуди присоединилась к «Шельмам» в надежде, что эта группировка сможет изменить бездушный облик города. Самый большой её недостаток в том, что она не может пройти мимо несправедливости, а у таких людей в Найт-Сити часто бывают проблемы. Впрочем, некоторые считают эту черту характера главным достоинством Джуди.
+    </p><br><br>
+  </div>
+</body>
+
+
+    <!-- jonny-->
+
+   <body>
+  <br><br><br>
+<img src="C:\Users\usero\OneDrive\Рабочий стол\Userov html\h3.jpg" alt="Фото" width="150" style="margin-right:  1300px;">
+   <style> 
+    body { 
+      background-color: yellow; 
+      color: yellow; 
+      font-family: 'Cyber', sans-serif; 
+    } 
+ 
+    .cyberpunk-windowe{
+ position: absolute; 
+      top: 2100px; 
+      left:200px; 
+      width: 1000px; 
+      height: 245px; 
+      background-color: rgb(255, 225, 204, 0.3); 
+      border: 2px solid #fff700; 
+      padding: 20px; 
+      box-sizing: border-box; 
+}
+    } 
+ 
+    .cyberpunk-text { 
+      font-size: 25px; 
+      line-height: 1.5; 
+    } 
+  </style> 
+</head> 
+<body> 
+  <div class="cyberpunk-windowe"> 
+    <p style="color: yellow">Джонни Сильверхенд (англ. Johnny Silverhand), настоящее имя Роберт Джон Линдер (англ. Robert John Linder) — известный рокер, певец, гитарист, автор песен, фронтмен, ведущий вокалист и основатель хром-рок-группы «Самурай», ярый противник корпорации «Арасака», организатор налёта на Арасака-тауэр в Найт-Сити 5 августа 2013 года, террорист, совершивший подрыв Арасака-тауэр 20 августа 2023 года, дезертир из армии США и участник Второй центральноамериканской войны в Никарагуа.<br>
+      В какой-то момент до 2077-го года энграмму Джонни поместили в прототип биочипа. Ёринобу Арасака украл технологию и спрятал в сейфе в своём пентхаусе отеля «Компэки плаза», желая в дальнейшем обнародовать преступления отца. О существовании биочипа с конструктом Джонни и его местонахождении узнала банда нетраннеров «Вудуисты», которые собирались украсть биочип и использовать конструкт Сильверхенда для установления связи с искином Альт Каннингем, чтобы та помогла им пройти за Чёрный заслон.
+    </p><br><br> 
+    </div>
+  </body>
+
+
+  <!--Panam-->
+
+
+     <body>
+  <br><br><br>
+<img src="C:\Users\usero\OneDrive\Рабочий стол\Userov html\h4.jpg" alt="Фото" width="150" style="margin-right:  1300px;">
+   <style> 
+    body { 
+      background-color: yellow; 
+      color: yellow; 
+      font-family: 'Cyber', sans-serif; 
+    } 
+ 
+    .cyberpunk-windowr{
+ position: absolute; 
+      top: 2400px; 
+      left:200px; 
+      width: 1000px; 
+      height: 225px; 
+      background-color: rgb(255, 225, 204, 0.3); 
+      border: 2px solid #fff700; 
+      padding: 20px; 
+      box-sizing: border-box; 
+}
+    } 
+ 
+    .cyberpunk-text { 
+      font-size: 25px; 
+      line-height: 1.5; 
+    } 
+  </style> 
+</head> 
+<body> 
+  <div class="cyberpunk-windowr"> 
+    <p style="color: yellow">Панам Палмер была частью кочевого клана Альдекальдо. В детстве её подруга попала в плен к «Ржавым стилетам», и всё кончилось бы очень плохо, если её не выследил Кэссиди Райтер. Панам никому не рассказывала об этом случае и не любит о нём вспоминать.<br>
+     Близкими друзьями Панам в клане были Митч Андерсон и Скорпион, с которыми девушка вместе занималась перевозками. Как-то Митч и Панам везли груз из Сан-Франциско в Канзас для одного из «ковбоев» — так называли владельцев огромных ферм по производству синтетического мяса. Панам ни разу не видела таких ферм, и от невыносимой вони девушке стало настолько плохо, что её стошнило прямо на сапоги заказчика. Однако на настроение пострадавшего заказчика это не повлияло, и он просто сказал, что «кланяться не обязательно, достаточно руку пожать».[4] Сама же Панам, вспоминая о самом странном товаре, который перевозила, может рассказать, как везла труп замдиректора по финансам компании «Кавказ» в багажнике.
+    </p><br><br><br>
+    </div>
+  </body>
+
+
+  <!--SOYKA-->
+
+
+    <body>
+  <br><br><br><br><br>
+<img src="C:\Users\usero\OneDrive\Рабочий стол\Userov html\h5.jpg" alt="Фото" width="150" style="margin-right:  1300px;">
+   <style> 
+    body { 
+      background-color: yellow; 
+      color: yellow; 
+      font-family: 'Cyber', sans-serif; 
+    } 
+ 
+    .cyberpunk-windowu{
+ position: absolute; 
+      top: 2690px; 
+      left:200px; 
+      width: 1000px; 
+      height: 245px; 
+      background-color: rgb(255, 225, 204, 0.3); 
+      border: 2px solid #fff700; 
+      padding: 20px; 
+      box-sizing: border-box; 
+}
+    } 
+ 
+    .cyberpunk-text { 
+      font-size: 25px; 
+      line-height: 1.5; 
+    } 
+  </style> 
+</head> 
+<body> 
+  <div class="cyberpunk-windowu"> 
+    <p style="color: yellow">Сон Соми (англ. Song So Mi) (кор. 송소미), также известная как Сойка (англ. Songbird) — талантливый нетраннер, аналитик разведки НСША, правая рука президента НСША Розалинд Майерс.<br>
+     Сойка считается одним из лучших хакеров в мире. Благодаря своим способностям она попала в разведку НСША, которая нуждалась в таких кадрах для защиты интересов государства. Её трудовой договор не предусматривает увольнения<br>
+     Иммунитет правительственного агента и покровительство могущественного государственного аппарата гарантировали Сойке неприкосновенность. Она могла маскировать номера правительственного транспорта на встречах официальных лиц НСША с главарями центральноамериканских хунт или заметать цифровые следы спецназа после ликвидации террористов, выдававших себя за команду Бартмосса, — сотрудникам «Сетевого дозора» оставалось только прислушиваться к эху её шагов в Сети. Нередко это эхо смолкало где-то рядом с Чёрным заслоном.
+    </p>
+    </div>
+  </body>
+
+
+  <!-- Vyktor-->
+
+
+   <body>
+  <br><br><br><br><br><br>
+<img src="C:\Users\usero\OneDrive\Рабочий стол\Userov html\h6.png" alt="Фото" width="150" style="margin-right:  1300px;">
+   <style> 
+    body { 
+      background-color: yellow; 
+      color: yellow; 
+      font-family: 'Cyber', sans-serif; 
+    } 
+ 
+    .cyberpunk-windowy{
+ position: absolute; 
+      top: 3000px; 
+      left:200px; 
+      width: 1000px; 
+      height: 260px; 
+      background-color: rgb(255, 225, 204, 0.3); 
+      border: 2px solid #fff700; 
+      padding: 20px; 
+      box-sizing: border-box; 
+}
+    } 
+ 
+    .cyberpunk-text { 
+      font-size: 25px; 
+      line-height: 1.5; 
+    } 
+  </style> 
+</head> 
+<body> 
+  <div class="cyberpunk-windowy"> 
+    <p style="color: yellow">Виктор Вектор (англ. Viktor Vektor) — лучший рипер Уотсона, владелец «Клиники Виктора» на Урмленд-стрит в Маленьком Китае, Уотсон, бывший боксёр-тяжеловес клуба «Бесы Найт-Сити».<br>
+     Виктор был боксёром-тяжеловесом в Уотсоне и принимал участие в VI Открытом гран-при Уотсона по боксу в весовой категории от 91 кг, в финале которого занял второе место и получил грамоту.<br>
+Позже он отказался от этой жизни и предпочёл относительно более честное ремесло подпольного рипера. Но и сейчас он с удовольствием смотрит боксёрские поединки. Его услуги весьма востребованы. Благодарить за это можно местного фиксера, которая настаивает на том, чтобы её наёмники получали новейшие импланты.
+<br>
+Виктор талантлив, терпелив и профессионален. На опыт и мастерство Виктора как рипера также обратили внимание корпорации. Ему поступило предложение работы от биотехнологической, фармакологической и кибернетической компании «Биотехника». Корпорация была готова пойти Виктору навстречу и обещала предоставить полный доступ к собственным авторским технологиям и охрану, чтобы ему не пришлось переезжать из Уотсона, однако Виктор оставил предложение без ответа
+    </p><br><br><br>
+    </div>
+  </body> <br><br><br>
+   <body>
+    <img src="C:\Users\usero\OneDrive\Рабочий стол\Userov html\map.png" alt="Фото" width="1000" >
+    <br><br>
+  <a href="https://cyberpunk2077-map.com/">
+<button class ="karkas-knopku" >
+  Cyber Map<span aria-hidden>_</span>
+  <span aria-hidden class="animatsiya">Error_</span>
+  <span aria-hidden class="meshchenia">2077</span>
+</button></a>
+
+</body>
+<br>
+<body>
+    <style> 
+  .video-containere { 
+    position: relative; 
+    right: 0px; /* Измените значение left в соответствии с вашими потребностями */ 
+  } 
+</style> 
+ 
+
+ 
+<div class="video-containere"> 
+    <video src="C:\Users\usero\OneDrive\Рабочий стол\Userov html\v3.mp4" alt="video" width="1500"  controls></video></div>
+  </body><br>
+    <a href="https://www.cyberpunk.net/us/ru/buy">
+<button class ="karkas-knopku" >
+  CyberPunk 2077<span aria-hidden>_</span>
+  <span aria-hidden class="animatsiya">None_</span>
+  <span aria-hidden class="meshchenia">2077</span>
+</button></a><br><br>
+
+<body>
+    <style> 
+  .video-containerr{ 
+    position: relative; 
+    right: 400px; /* Измените значение left в соответствии с вашими потребностями */ 
+  } 
+</style> 
+ 
+
+ 
+<div class="video-containerr"> 
+    <video src="C:\Users\usero\OneDrive\Рабочий стол\Userov html\v4.mp4" alt="video" width="700"  controls></video></div>
+  </body><br>
+
+   <body>
+    <style>
+    body { 
+      background-color: yellow; 
+      color: yellow; 
+      font-family: 'Cyber', sans-serif; 
+    } 
+ 
+    .cyberpunk-windowa{
+ position: absolute; 
+      top: 5300px; 
+      left:750px; 
+      width: 700px; 
+      height: 260px; 
+      background-color: rgb(255, 225, 204, 0.3); 
+      border: 2px solid #fff700; 
+      padding: 20px; 
+      box-sizing: border-box; 
+}
+    } 
+ 
+    .cyberpunk-text { 
+      font-size: 25px; 
+      line-height: 1.5; 
+    } 
+  </style> 
+</head> 
+<body> 
+  <div class="cyberpunk-windowa"> 
+    <p style="color: yellow"><big>Действие Cyberpunk: Edgerunners разворачивается в Ночном городе, независимом мегаполисе, расположенном в Свободном штате Калифорния, который страдает от обширной коррупции, кибернетической зависимости и бандитского насилия. Город разделен на шесть районов, каждый из которых имеет свои собственные требования к жизни и контролируется несколькими мегакорпорациями , включая Арасаку и ее конкурента Милитек. Сюжет аниме в основном разворачивается в Санто-Доминго, старейшем, беднейшем и самом промышленном районе Найт-Сити.
+    </big></p><br><br><br>
+    </div>
+  </body> <br><br><br>
+    <footer> 
+        <p>&copy; 2023 Cyberpunk 2077. All rights reserved.</p> 
+    </footer> 
+
+</html>
